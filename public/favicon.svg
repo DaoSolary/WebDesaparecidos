@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Fundo circular azul -->
+  <circle cx="50" cy="50" r="48" fill="#2563eb"/>
+  
+  <!-- Silhueta de pessoa central -->
+  <circle cx="50" cy="32" r="10" fill="white"/>
+  <path d="M 50 42 Q 38 42 38 52 L 38 60 Q 38 65 42 65 L 58 65 Q 62 65 62 60 L 62 52 Q 62 42 50 42" fill="white"/>
+  
+  <!-- Lupa com pessoa dentro -->
+  <circle cx="68" cy="28" r="8" fill="none" stroke="white" stroke-width="2.5" opacity="0.9"/>
+  <line x1="74" y1="34" x2="80" y2="40" stroke="white" stroke-width="2.5" stroke-linecap="round" opacity="0.9"/>
+  
+  <!-- Pequena pessoa dentro da lupa -->
+  <circle cx="68" cy="26" r="2.5" fill="white" opacity="0.8"/>
+  <path d="M 68 28.5 Q 65 28.5 65 32 L 65 35 Q 65 36.5 66.5 36.5 L 69.5 36.5 Q 71 36.5 71 35 L 71 32 Q 71 28.5 68 28.5" fill="white" opacity="0.8"/>
+</svg>
+
