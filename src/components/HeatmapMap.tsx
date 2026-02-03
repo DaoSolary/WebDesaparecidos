@@ -115,7 +115,7 @@ export function HeatmapMap({ cases, provinceStats }: HeatmapMapProps) {
     // Verificar se já foi carregado
     // @ts-ignore
     if (window.L) {
-      script.onload();
+      script.onload(new Event('load'));
     } else {
       document.head.appendChild(script);
     }

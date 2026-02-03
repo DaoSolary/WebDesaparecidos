@@ -34,6 +34,12 @@ type MissingPerson = {
   status: string;
   approved: boolean;
   photos: Array<{ url: string }>;
+  reporterId?: string;
+  reporter?: {
+    id?: string;
+    email?: string;
+    name?: string;
+  };
 };
 
 export function CitizenDashboard() {

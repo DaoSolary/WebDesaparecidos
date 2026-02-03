@@ -19,7 +19,7 @@ export function initSocket(userId?: string, userRole?: string) {
     setTimeout(() => {
       if (!socket?.connected && userId) {
         console.log('[SOCKET] Reconexão falhou, criando novo socket...');
-        socket.disconnect();
+        socket?.disconnect();
         socket = null;
         createNewSocket(userId);
       }
@@ -57,7 +57,7 @@ function createNewSocket(userId?: string, userRole?: string) {
     
     if (userId) {
       // Emitir imediatamente ao conectar
-      socket.emit('join-user-room', { userId, userRole });
+      socket?.emit('join-user-room', { userId, userRole });
       console.log(`[SOCKET] Emitido join-user-room para usuário ${userId} (role: ${userRole})`);
       
       // Também tentar novamente após um pequeno delay para garantir
