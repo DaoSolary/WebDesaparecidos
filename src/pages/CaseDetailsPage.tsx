@@ -293,7 +293,7 @@ export function CaseDetailsPage() {
         </div>
         {details.photos[0] && (
           <div className="mt-6 overflow-hidden rounded-xl">
-            <img src={details.photos[0].url} alt={details.fullName} className="h-64 w-full object-cover" />
+            <img src={`${SERVER_BASE_URL}${person.photos[0].url}`} alt={details.fullName} className="h-64 w-full object-cover" />
           </div>
         )}
         <p className="mt-4 text-slate-600">{details.description}</p>

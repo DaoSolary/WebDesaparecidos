@@ -2,6 +2,10 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { api } from '../api/client';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { API_BASE_URL } from '../config';
+import { SERVER_BASE_URL } from '../config';
+
+
 
 type MissingPerson = {
   id: string;
@@ -81,7 +85,7 @@ export function CasesPage() {
             {items.map((person) => (
               <Link key={person.id} to={`/casos/${person.id}`} className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm hover:border-blue-500">
                 <div className="aspect-video overflow-hidden rounded-lg bg-slate-100">
-                  {person.photos[0] ? <img src={person.photos[0].url} alt={person.fullName} className="h-full w-full object-cover" /> : null}
+                  {person.photos[0] ? <img src={`${SERVER_BASE_URL}${person.photos[0].url}`} alt={person.fullName} className="h-full w-full object-cover" /> : null}
                 </div>
                 <div className="mt-4 space-y-2">
                   <div className="flex items-center justify-between">
