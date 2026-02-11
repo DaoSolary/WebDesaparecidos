@@ -10,6 +10,8 @@ import { ConfirmModal } from '../components/ConfirmModal';
 import { InfoModal } from '../components/InfoModal';
 import { SightingModal } from '../components/SightingModal';
 import { MessageSquare, AlertTriangle, CheckCircle, XCircle, Eye, Trash2, Edit, Save } from 'lucide-react';
+import { SERVER_BASE_URL } from '../config';
+
 
 type CaseDetails = {
   id: string;
@@ -293,7 +295,7 @@ export function CaseDetailsPage() {
         </div>
         {details.photos[0] && (
           <div className="mt-6 overflow-hidden rounded-xl">
-            <img src={`${SERVER_BASE_URL}${person.photos[0].url}`} alt={details.fullName} className="h-64 w-full object-cover" />
+            <img src={`${SERVER_BASE_URL}${details.photos[0].url}`} alt={details.fullName} className="h-64 w-full object-cover" />
           </div>
         )}
         <p className="mt-4 text-slate-600">{details.description}</p>
